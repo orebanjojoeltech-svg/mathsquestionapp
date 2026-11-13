@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7f2">
+  <meta name="description" content="Explore the JSS1 and JSS2 mathematics syllabus with clear notes, worked examples and practice questions.">
+  <title>Mathematics Made Easy — JSS Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Mathematics Made Easy home">
+        <span class="brand-mark" aria-hidden="true">∑</span>
+        <span class="brand-copy"><strong>Math made</strong><strong>easy<span>.</span></strong></span>
+      </a>
+      <div class="side-label">YOUR CLASS</div>
+      <div class="class-switch" role="group" aria-label="Choose your class">
+        <button class="class-button is-active" data-class="JSS1">JSS 1</button>
+        <button class="class-button" data-class="JSS2">JSS 2</button>
+      </div>
+      <div class="side-label topic-label">LEARNING PATH <span id="topic-count"></span></div>
+      <nav class="topic-nav" id="topic-nav" aria-label="Syllabus topics"></nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">✳</span><strong>Small steps,<br>big answers.</strong><p>Keep practising. You’re doing great.</p></div>
+        <div class="sidebar-foot">MADE FOR CURIOUS MINDS <span>✦</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-button" id="menu-button" aria-label="Open syllabus menu">☰</button>
+        <div class="breadcrumb">Learning hub <span>/</span> <strong id="crumb-class">JSS 1</strong></div>
+        <label class="search-box" for="search-input"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Find a topic..." autocomplete="off"><kbd>/</kbd></label>
+      </header>
+
+      <section class="welcome-row">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR MATHEMATICS CLASSROOM</div>
+          <h1>Maths made <span>make sense.</span></h1>
+          <p class="welcome-copy">A little practice today adds up to a lot tomorrow.</p>
+        </div>
+        <div class="date-card"><span class="date-sun">☼</span><span id="today-label"></span></div>
+      </section>
+
+      <section class="stats-grid" aria-label="Your learning progress">
+        <article class="stat-card stat-progress"><div class="stat-top"><span class="stat-label">YOUR PROGRESS</span><span class="stat-icon">↗</span></div><div class="progress-number"><strong id="progress-value">0%</strong><span>of this class explored</span></div><div class="progress-track"><span id="progress-bar"></span></div><div class="stat-note"><span class="tiny-star">✦</span> Every topic you open counts as a win.</div></article>
+        <article class="stat-card stat-topics"><div class="stat-top"><span class="stat-label">ON YOUR LEARNING PATH</span><span class="stat-icon green">▤</span></div><div class="stat-big"><strong id="stat-topics">0</strong><span>topics to explore</span></div><div class="stat-note">Carefully arranged for your class.</div></article>
+        <article class="stat-card stat-practice"><div class="stat-top"><span class="stat-label">PRACTICE QUESTIONS</span><span class="stat-icon yellow">✎</span></div><div class="stat-big"><strong id="stat-questions">0</strong><span>with worked answers</span></div><div class="stat-note">Learn the how, not just the answer.</div></article>
+      </section>
+
+      <section class="study-layout">
+        <div class="syllabus-column">
+          <div class="section-heading"><div><div class="eyebrow small-eyebrow">THE SYLLABUS</div><h2 id="syllabus-heading">Your JSS 1 topics</h2></div><span class="coverage-pill"><span>●</span> FULL SYLLABUS</span></div>
+          <div class="topic-grid" id="topic-grid"></div>
+          <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No matching topics</h3><p>Try a different search, or switch to another class.</p></div>
+        </div>
+        <aside class="lesson-column" id="lesson-panel" aria-live="polite"></aside>
+      </section>
+      <footer class="page-footer"><span>MATHEMATICS MADE EASY</span><span>Learn it. Try it. Get it. <b>✦</b></span></footer>
+    </main>
+  </div>
+</body>
+</html>
